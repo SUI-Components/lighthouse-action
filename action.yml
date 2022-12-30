@@ -27,6 +27,8 @@ runs:
       with:
         configPath: ${{inputs.lhConfigPath}}
         urls: ${{inputs.urls}}
+        uploadArtifacts: true
+        temporaryPublicStorage: true
     - name: Format lighthouse score
       id: format_lhci_score
       uses: actions/github-script@v6
